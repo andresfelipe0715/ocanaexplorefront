@@ -55,7 +55,7 @@ export class LoginComponent {
                 localStorage.setItem('userId', userData.userId);// Almacena el ID del usuario en localStorage
                 localStorage.setItem('personId', userData.personId);
                 sessionStorage.setItem('userRole', userData.profileName);
-                this.router.navigate(['/user']);
+                this.router.navigate(['/profileUser']);
               } else {
                 sessionStorage.setItem('userId', userData.userId);// Almacena el ID del usuario en sessionStorage
                 sessionStorage.setItem('personId', userData.personId);

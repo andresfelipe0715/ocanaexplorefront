@@ -23,4 +23,16 @@ export class AuthenticationService {
     return this.http.get(url);
   }
 
+  //Obtener persona por ID
+  getPersonById(personId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}person/${personId}`);
+  }
+
+  //Optener usuario por ID
+  getUserById(userId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}user/${userId}`)
+  }
+
+  
+
 }

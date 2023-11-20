@@ -6,6 +6,7 @@ import { ServiceCreatorComponent } from './pages/service-creator/service-creator
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ServicesComponent } from './pages/services-on/services.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: '',component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'creator', component: ServiceCreatorComponent },
   { path: 'header', component: HeaderComponent },
-  {path: 'servicios/:tipoServicio', component: ServicesComponent}
+  {path: 'servicios/:tipoServicio', component: ServicesComponent},
+  {path: 'profileUser', component: UserProfileComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,150 @@
+.container-primary {
+    min-height: 615px;
+    width: 100%;
+    height: calc(100vh - 100px);
+    // background-image: url('../../../../assets/img/pexels.jpg');
+    background-size: cover; //Ajustar la imagen al tamaño del contenedor
+    background-position: center; // Centrar la imagen
+    padding-top: 2%;
+    padding-bottom: 2%;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f870;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .button-cont {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    width: 20rem ;
+    padding: 10px 20px;
+    background-color: #f3b4a294;
+    color: #000000d0;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    align-items: center;
+    margin: 2%;
+  }
+  button:hover {
+    background-color: #ffcfb7;
+  }
+  
+  // Estilos adicionales para el diseño de dos campos por fila
+  .form-group {
+    display: inline-block;
+    width: 48%; // Ancho del 48% para que haya dos campos por fila
+    margin-right: 1%; // Margen derecho para separar los campos
+    margin-left: 1%;
+  }
+  
+  // Estilo de mostrar contraseña
+  .container-eye {
+    --color: #797979;
+    --size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+  
+  }
+  .container-eye .eye {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    margin: 0 10px 42px 0;
+  }
+  .container-eye .eye-slash {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    display: none;
+    margin: 0 10px 42px 0;
+  }
+  .container-eye input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .container-eye input:checked ~ .eye {
+    display: none;
+  }
+  .container-eye input:checked ~ .eye-slash {
+    display: block;
+  }
+  
+  //móvil
+  @media (max-width: 340px) {
+  
+    .container-primary {
+    min-height: auto;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    }
+  
+    .container {
+    max-width: 90%;
+    }
+  
+    .form-group {
+    width: 100%;
+    }
+  
+    .button-cont {
+    display: block;
+    justify-content: center;
+    }
+  
+    button {
+    width: 100%;
+    margin: 2% 0;
+    }
+  
+    }
+  

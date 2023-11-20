@@ -21,6 +21,7 @@
             <p>ID del Servicio: {{ servicio.serviceId }}</p>
             <p *ngIf="servicio.typeId">ID del Tipo: {{ servicio.typeId }}</p>
             <p *ngIf="servicio.typeName">Nombre del Tipo: {{ servicio.typeName }}</p>
+            <button (click)="addPlan(servicio.serviceId)">Elegir</button>
         </div>
 
     </div>

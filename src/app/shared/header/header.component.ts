@@ -14,7 +14,7 @@ export class HeaderComponent {
   //verificar usuario registrado
   verifySession() {
     if (localStorage.getItem("userId")) {// Si existe localStorage, redirige a /user
-      this.router.navigate(["/user"]);
+      this.router.navigate(["/profileUser"]);
       //forma 2: window.location.href = "/user";
     } else if (sessionStorage.getItem("userId")) {// Si existe en sessionStorage, redirige a /admin
       this.router.navigate(["/admin"]);// Si no existe, redirige a /login
