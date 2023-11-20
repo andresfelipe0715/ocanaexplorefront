@@ -1,0 +1,98 @@
+.containerPrimary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 920px;
+    // background-image: url('../../../../assets/img/pexels.jpg');
+    background-size: cover; // Esto ajustará la imagen para que cubra todo el contenedor
+    background-position: center; // Esto centrará la imagen en el contenedor
+    // background-repeat: no-repeat; // Esto evita que la imagen se repita
+  }
+  
+  .registration-container {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    padding-bottom: 20px;
+    background-color: #ffffff5b;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .registration-container h2 {
+    padding: 15px;
+    color: #000000;
+  }
+  
+  .registration-form {
+    max-width: 750px;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px;
+    background-color: #ffffffa2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registration-form label {
+    display: block; /* Hace que cada etiqueta esté en su propia línea */
+    margin-bottom: 5px; /* Espacio entre etiquetas y campos de entrada */
+    font-weight: bold; /* Hace que las etiquetas sean más prominentes */
+    color: #333333c0; /* Color del texto de la etiqueta */
+    font-size: 18px; /* Tamaño de fuente de la etiqueta */
+    text-align: left; /* Alinea el texto de la etiqueta a la derecha */
+  }
+  
+  .registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  
+  .registration-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f3b4a294;
+    color: #000000d0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .registration-form button:hover {
+    background-color: #ffcfb7;
+  }
+  
+  
+  //mensajes de error
+  .error-message {
+    padding-top: 10px;
+    color: red;
+    font-weight: bold;
+  }
+  
+  
+  
+  //mensaje flotante
+  .floating-message {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e9ffe9e7;
+    color: #000000ac;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    // z-index: 9999;  //Un valor alto como 9999 asegura que el mensaje esté en la parte superior y sea visible
+  }
+  

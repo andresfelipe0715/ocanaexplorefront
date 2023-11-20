@@ -1,0 +1,83 @@
+<div class="right-container2">
+
+    <h1 class="title">Nuevo Producto</h1>
+    <form method="POST">
+
+        <label for="typeName" class="etiqueta">Tipo de Servicio:</label>
+        <select name="typeName" class="campo select-custom" required [(ngModel)]="productoNuevo.typeName">
+            <option value="" disabled selected>Seleccione un tipo de servicio</option>
+            <option value="Hoteleria">Hoteleria</option>
+            <option value="Restaurante">Restaurante</option>
+            <option value="Sitio turistico">Sitio turistico</option>
+        </select>
+
+        <label for="serviceName" class="etiqueta">Nombre del Servicio:</label>
+        <input type="text" name="serviceName" class="campo" required [(ngModel)]="productoNuevo.serviceName">
+
+        <label for="description" class="etiqueta">Descripción:</label>
+        <textarea name="description" class="campo" required [(ngModel)]="productoNuevo.description"
+            maxlength="255"></textarea>
+
+        <label for="serviceHour" class="etiqueta">Horario del Servicio:</label>
+        <input type="text" name="serviceHour" class="campo" required [(ngModel)]="productoNuevo.serviceHour">
+
+        <label for="contact" class="etiqueta">Contacto:</label>
+        <input type="text" name="contact" class="campo" required [(ngModel)]="productoNuevo.contact">
+
+        <label for="location" class="etiqueta">Ubicación:</label>
+        <input type="text" name="location" class="campo" required [(ngModel)]="productoNuevo.location">
+
+        <label for="serviceImg" class="etiqueta">Imagen del Servicio:</label>
+        <input type="file" name="serviceImg" class="campo file-input" accept="image/*"
+            (change)="upload_image_nuevo($event)">
+        <div class="img-container">
+            <img [src]="imagenBase64_2" class="imagen-preview">
+        </div>
+
+        <!-- <label for="room" class="etiqueta">Precio por Habitación:</label>
+        <input type="number" name="room" class="campo" required [(ngModel)]="productoNuevo.room"> -->
+
+        <!-- <label for="doubleRoom" class="etiqueta">Precio por Habitación Doble:</label>
+        <input type="number" name="doubleRoom" class="campo" required [(ngModel)]="productoNuevo.doubleRoom"> -->
+
+        <!-- Campos específicos para Hoteleria -->
+        <div *ngIf="productoNuevo.typeName === 'Hoteleria'">
+            <label for="rating" class="etiqueta">Calificación:</label>
+            <input type="text" name="rating" class="campo" required [(ngModel)]="productoNuevo.rating">
+
+            <label for="room" class="etiqueta">Precio por Habitación:</label>
+            <input type="number" name="room" class="campo" required [(ngModel)]="productoNuevo.room">
+
+            <label for="doubleRoom" class="etiqueta">Precio por Habitación Doble:</label>
+            <input type="number" name="doubleRoom" class="campo" required [(ngModel)]="productoNuevo.doubleRoom">
+        </div>
+
+        <!-- Campos específicos para Restaurante -->
+        <div *ngIf="productoNuevo.typeName === 'Restaurante'">
+            <label for="foodPrice" class="etiqueta">Precio de la Comida:</label>
+            <input type="number" name="foodPrice" class="campo" required [(ngModel)]="productoNuevo.foodPrice">
+
+            <label for="priceTrans" class="etiqueta">Precio de Transporte:</label>
+            <input type="number" name="priceTrans" class="campo" required [(ngModel)]="productoNuevo.priceTrans">
+        </div>
+
+        <!-- Campos específicos para Sitio turistico -->
+        <div *ngIf="productoNuevo.typeName === 'Sitio turistico'">
+            <label for="priceTrans" class="etiqueta">Precio de Transporte:</label>
+            <input type="number" name="priceTrans" class="campo" required [(ngModel)]="productoNuevo.priceTrans">
+
+            <label for="entranceFee" class="etiqueta">Tarifa de Entrada:</label>
+            <input type="number" name="entranceFee" class="campo" required [(ngModel)]="productoNuevo.entranceFee">
+
+            <label for="personalGuide" class="etiqueta">Guía Personal:</label>
+            <input type="number" name="personalGuide" class="campo" required [(ngModel)]="productoNuevo.personalGuide">
+        </div>
+
+        <div class="img-booton">
+            <input type="submit" value="Agregar" class="boton guardar-button" (click)="anadirServicio()">
+            <!-- <input type="submit" value="Limpiar" class="boton guardar-button" (click)="limpiarCamposnuevo()"> -->
+        </div>
+
+    </form>
+
+</div>

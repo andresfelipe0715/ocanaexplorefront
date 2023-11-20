@@ -1,0 +1,48 @@
+<!-- services.component.html -->
+<div *ngIf="datosServicios" class="tarjetas-container">
+    <div *ngFor="let servicio of datosServicios" class="tarjeta">
+
+        <div class="imagen">
+            <img *ngIf="servicio.serviceImg" [src]="servicio.serviceImg" alt="Imagen del Servicio">
+        </div>
+
+        <div class="contenido">
+            <h2>Nombre del Servicio: {{ servicio.serviceName }}</h2>
+            <p *ngIf="servicio.description">Descripción: {{ servicio.description }}</p>
+            <p *ngIf="servicio.doubleRoom !== 0">Habitación Doble: {{ servicio.doubleRoom }}</p>
+            <p *ngIf="servicio.entranceFee !== 0">Costo de Entrada: {{ servicio.entranceFee }}</p>
+            <p *ngIf="servicio.foodPrice !== 0">Precio de Comida: {{ servicio.foodPrice }}</p>
+            <p *ngIf="servicio.location">Ubicación: {{ servicio.location }}</p>
+            <p *ngIf="servicio.personalGuide !== 0">Guía Personal: {{ servicio.personalGuide }}</p>
+            <p *ngIf="servicio.priceTrans !== 0">Precio por Transporte: {{ servicio.priceTrans }}</p>
+            <p *ngIf="servicio.rating">Calificación: {{ servicio.rating }}</p>
+            <p *ngIf="servicio.room !== 0">Habitación: {{ servicio.room }}</p>
+            <p *ngIf="servicio.serviceHour">Horario de Servicio: {{ servicio.serviceHour }}</p>
+            <p>ID del Servicio: {{ servicio.serviceId }}</p>
+            <p *ngIf="servicio.typeId">ID del Tipo: {{ servicio.typeId }}</p>
+            <p *ngIf="servicio.typeName">Nombre del Tipo: {{ servicio.typeName }}</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- <div *ngIf="datosServicios">
+    <div *ngFor="let servicio of datosServicios">
+        <h2>Nombre del Servicio: {{ servicio.serviceName }}</h2>
+        <p>Descripción: {{ servicio.description }}</p>
+        <p>Habitación Doble: {{ servicio.doubleRoom }}</p>
+        <p>Costo de Entrada: {{ servicio.entranceFee }}</p>
+        <p>Precio de Comida: {{ servicio.foodPrice }}</p>
+        <p>Ubicación: {{ servicio.location }}</p>
+        <p>Guía Personal: {{ servicio.personalGuide }}</p>
+        <p>Precio por Transporte: {{ servicio.priceTrans }}</p>
+        <p>Calificación: {{ servicio.rating }}</p>
+        <p>Habitación: {{ servicio.room }}</p>
+        <p>Horario de Servicio: {{ servicio.serviceHour }}</p>
+        <p>ID del Servicio: {{ servicio.serviceId }}</p>
+        <img [src]="servicio.serviceImg" alt="Imagen del Servicio">
+        <p>ID del Tipo: {{ servicio.typeId }}</p>
+        <p>Nombre del Tipo: {{ servicio.typeName }}</p>
+    </div>
+  </div> -->

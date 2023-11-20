@@ -1,0 +1,136 @@
+.containerPrimary{
+    width: 100%;
+    height: 100vh;
+    // background-image: url('../../../../assets/img/pexels.jpg');
+    background-size: cover; /* Esto ajustará la imagen para que cubra todo el contenedor */
+    background-position: center; /* Esto centrará la imagen en el contenedor */
+    // background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+  }
+  .container {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ffffff8e;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar contenido dentro del contenedor */
+  }
+  
+  .container h2 {
+    padding: 15px;
+    color: #000000;
+  }
+  
+  /* Aplicar estilo al formulario */
+  form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffffa2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para los campos de entrada de texto */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  /* Estilo para el botón */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f3b4a294;
+    color: #000000d0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  button:hover {
+    background-color: #ffcfb7;
+  }
+  
+  /* Estilo para el mensaje de registro */
+  .registro-message {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 20px;
+  }
+  
+  /* Estilo para el enlace de registro */
+  .registro-link {
+    font-size: 16px;
+    color: #3686ff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .registro-link:hover {
+    color: #ff0202;
+  }
+  
+  
+  //mensajes de error
+  .error-message {
+    color: red;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+  
+  
+  
+  //mensaje flotante
+  .floating-message {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e9ffe9e7;
+    color: #000000ac;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    // z-index: 9999;  //Un valor alto como 9999 asegura que el mensaje esté en la parte superior y sea visible
+  }
+  
+  //móvil
+  @media (max-width: 600px) {
+  
+    .container {
+      width: 90%;
+    }
+  
+    form {
+      max-width: 100%;
+    }
+  
+    input {
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    .floating-message {
+      font-size: 14px;
+      padding: 15px 25px;
+    }
+  
+    }
+  
+  

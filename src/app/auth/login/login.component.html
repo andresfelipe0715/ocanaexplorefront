@@ -1,0 +1,23 @@
+<div class="containerPrimary">
+  <div class="container">
+    <h2>Iniciar sesión</h2>
+    <form (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Nombre de usuario" [(ngModel)]="username" name="username" required maxlength="40"
+        autocomplete="username">
+      <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" required maxlength="40"
+        autocomplete="current-password">
+      <button type="submit">Iniciar</button>
+    </form>
+
+    <!-- mensajes de error -->
+    <div *ngIf="isEmptyField" class="error-message">Por favor, complete los campos.</div>
+    <div *ngIf="incorrectUser" class="error-message">Usuario Incorrecto.</div>
+    <div *ngIf="incorrectPassword" class="error-message">Contraseña incorrecta.</div>
+
+    <div *ngIf="successMessage" class="floating-message">{{messageWelcome}}</div>
+
+    <p class="registro-message">¿Eres nuevo aquí?</p>
+    <a href="/registro" class="registro-link">¡Crea tu cuenta ahora!</a>
+
+  </div>
+</div>

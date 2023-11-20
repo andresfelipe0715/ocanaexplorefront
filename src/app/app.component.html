@@ -1,0 +1,11 @@
+<app-header *ngIf="!isEditProductRoute()"></app-header>
+
+<div class="content" [style.padding-top.px]="isEditProductRoute() ? 0 : 82">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- <app-header></app-header>
+<div class="content">
+    <router-outlet></router-outlet>
+</div> -->
+

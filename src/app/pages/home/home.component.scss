@@ -1,0 +1,49 @@
+#contenedor-superior {
+  background-image: url('../../../assets/img/ooo.jpg');
+  background-size: cover; // Añade la propiedad background-size: cover
+  background-position: center;  /* Puedes cambiar este color */
+  height: 100px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+#contenedor-inferior {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2ecc7044;
+  padding: 20px;
+}
+
+.contenedor-inferior-item {
+  width: 32%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover; // Añade la propiedad background-size: cover
+  background-position: center; //Añade la propiedad background-position: center; para centrar la imagen
+}
+
+.contenedor-inferior-item:nth-child(1) {
+  background-image: url('../../../assets/img/logo-hotel.jpg');
+}
+
+.contenedor-inferior-item:nth-child(2) {
+  background-image: url('../../../assets/img/logo-restaurante.jpg');
+}
+
+.contenedor-inferior-item:nth-child(3) {
+  background-image: url('../../../assets/img/logo-turismo.jpg');
+}
+
+.boton {
+  padding: 10px 20px;
+  background-color: #ffffffa9;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
