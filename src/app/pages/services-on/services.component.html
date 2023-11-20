@@ -7,7 +7,8 @@
         </div>
 
         <div class="contenido">
-            <h2>Nombre del Servicio: {{ servicio.serviceName }}</h2>
+            <h2 *ngIf="servicio.typeName">{{ servicio.typeName }}</h2>
+            <p>Nombre del Servicio: {{ servicio.serviceName }}</p>
             <p *ngIf="servicio.description">Descripción: {{ servicio.description }}</p>
             <p *ngIf="servicio.doubleRoom !== 0">Habitación Doble: {{ servicio.doubleRoom }}</p>
             <p *ngIf="servicio.entranceFee !== 0">Costo de Entrada: {{ servicio.entranceFee }}</p>
@@ -18,9 +19,9 @@
             <p *ngIf="servicio.rating">Calificación: {{ servicio.rating }}</p>
             <p *ngIf="servicio.room !== 0">Habitación: {{ servicio.room }}</p>
             <p *ngIf="servicio.serviceHour">Horario de Servicio: {{ servicio.serviceHour }}</p>
-            <p>ID del Servicio: {{ servicio.serviceId }}</p>
-            <p *ngIf="servicio.typeId">ID del Tipo: {{ servicio.typeId }}</p>
-            <p *ngIf="servicio.typeName">Nombre del Tipo: {{ servicio.typeName }}</p>
+            <!-- <p>ID del Servicio: {{ servicio.serviceId }}</p> -->
+            <!-- <p *ngIf="servicio.typeId">ID del Tipo: {{ servicio.typeId }}</p> -->
+            
             <button (click)="addPlan(servicio.serviceId)">Elegir</button>
         </div>
 
