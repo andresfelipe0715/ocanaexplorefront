@@ -29,4 +29,8 @@ export class HeaderComponent {
     this.router.navigate(['/home']);
   }
 
+  redirectPlan(): void {
+    this.router.navigate(['/miPlan']);
+  }
+
 }

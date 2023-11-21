@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ServicesComponent } from './pages/services-on/services.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
+import { MiPlanComponent } from './pages/mi-plan/mi-plan.component';
 
 const routes: Routes = [
   { path: '',component: HomeComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'creator', component: ServiceCreatorComponent },
   { path: 'header', component: HeaderComponent },
   {path: 'servicios/:tipoServicio', component: ServicesComponent},
-  {path: 'profileUser', component: UserProfileComponent}
+  {path: 'profileUser', component: UserProfileComponent},
+  {path: 'miPlan', component: MiPlanComponent}
 ];
 
 @NgModule({

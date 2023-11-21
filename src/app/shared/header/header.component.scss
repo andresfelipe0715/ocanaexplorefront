@@ -7,16 +7,20 @@
   width: 100%;
   height: 80px;
   border-bottom: 1px solid black;
+  background: #c1ddc7;
 }
 
 .conten-img {
-  background: rgb(255, 255, 255);
+  background-size: contain;  /* Hace que la imagen cubra completamente el contenedor */
+  background-position: center;  /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat;  /* Evita que la imagen se repita */
+  background-image: url('../../../assets/img/logo.png');
   width: 30%;
   height: 80px;
 }
 
 .conten-booton {
-  background-color: rgba(81, 255, 0, 0.253);
+  background-color: #c1ddc7;
   width: 70%;
   height: 80px;
   display: flex;

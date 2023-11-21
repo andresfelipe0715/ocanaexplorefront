@@ -31,4 +31,10 @@ export class PlanService {
     const url = `${this.apiUrl}planDetail/save`;
     return this.http.post(url, planDetail);
   }
+
+  // Obtener servicio por id
+  getServiceId(serviceId: string): Observable<any> {
+    const url = `${this.apiUrl}service/${serviceId}`;
+    return this.http.get(url);
+  }
 }
