@@ -37,4 +37,13 @@ export class PlanService {
     const url = `${this.apiUrl}service/${serviceId}`;
     return this.http.get(url);
   }
+
+  // Obtener servicios de usuario por planid
+  getserviceByplanId(planId: string): Observable<any> {
+    const url = `${this.apiUrl}planDetail/plan/${planId}`;
+    return this.http.get(url);
+  }
+
 }
+
+ 

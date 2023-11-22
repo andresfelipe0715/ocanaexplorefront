@@ -1,0 +1,25 @@
+.servicio-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .imagen {
+    margin-right: 20px;
+  }
+
+  .imagen img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .contenido {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contenido p {
+    margin: 5px 0;
+  }

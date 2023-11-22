@@ -1,1 +1,40 @@
-<p>mi-plan works!</p>
+
+<div *ngFor="let servicio of productcart" class="servicio-container">
+    <div class="imagen">
+      <img *ngIf="servicio.serviceImg" [src]="servicio.serviceImg" alt="Imagen del Servicio">
+    </div>
+  
+    <div class="contenido">
+      <h2 *ngIf="servicio.date">Fecha: {{ servicio.date }}</h2>
+      <p *ngIf="servicio.serviceName">Nombre del Servicio: {{ servicio.serviceName }}</p>
+      <p *ngIf="servicio.foodAmount !== 0">Cantidad de Comida: {{ servicio.foodAmount }}</p>
+      <p *ngIf="servicio.planDetailId">Detalles del Plan ID: {{ servicio.planDetailId }}</p>
+      <p *ngIf="servicio.planId">Plan ID: {{ servicio.planId }}</p>
+      <p *ngIf="servicio.serviceId">Service ID: {{ servicio.serviceId }}</p>
+      <p *ngIf="servicio.subtotal !== 0">Subtotal: {{ servicio.subtotal }}</p>
+      <p *ngIf="servicio.time">Hora: {{ servicio.time }}</p>
+      <p *ngIf="servicio.tripAmount !== 0">Cantidad de Viaje: {{ servicio.tripAmount }}</p>
+    </div>
+  </div>
+
+  
+<!-- <div *ngFor="let servicio of productcart">
+    <div>
+      <div class="imagen">
+        <img *ngIf="servicio.serviceImg" [src]="servicio.serviceImg" alt="Imagen del Servicio">
+      </div>
+  
+      <div class="contenido">
+        <h2 *ngIf="servicio.date">Fecha: {{ servicio.date }}</h2>
+        <p *ngIf="servicio.serviceName">Nombre del Servicio: {{ servicio.serviceName }}</p>
+        <p *ngIf="servicio.foodAmount !== 0">Cantidad de Comida: {{ servicio.foodAmount }}</p>
+        <p *ngIf="servicio.planDetailId">Detalles del Plan ID: {{ servicio.planDetailId }}</p>
+        <p *ngIf="servicio.planId">Plan ID: {{ servicio.planId }}</p>
+        <p *ngIf="servicio.serviceId">Service ID: {{ servicio.serviceId }}</p>
+        <p *ngIf="servicio.subtotal !== 0">Subtotal: {{ servicio.subtotal }}</p>
+        <p *ngIf="servicio.time">Hora: {{ servicio.time }}</p>
+        <p *ngIf="servicio.tripAmount !== 0">Cantidad de Viaje: {{ servicio.tripAmount }}</p>
+      </div>
+    </div>
+  </div> -->
+  

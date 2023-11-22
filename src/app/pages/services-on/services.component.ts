@@ -69,6 +69,7 @@ export class ServicesComponent {
             (data) => {
               // Manejar la respuesta del servidor
               console.log('Detalles del plan guardados:', data);
+              alert("Agregado a mi plan");
             },
             (error) => {
               // Manejar errores
