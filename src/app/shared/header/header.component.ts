@@ -17,7 +17,7 @@ export class HeaderComponent {
       this.router.navigate(["/profileUser"]);
       //forma 2: window.location.href = "/user";
     } else if (sessionStorage.getItem("userId")) {// Si existe en sessionStorage, redirige a /admin
-      this.router.navigate(["/admin"]);// Si no existe, redirige a /login
+      this.router.navigate(["/profileadmin"]);// Si no existe, redirige a /login
     } else {
       this.router.navigate(["/login"]);
     }
