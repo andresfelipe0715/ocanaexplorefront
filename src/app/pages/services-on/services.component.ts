@@ -69,7 +69,7 @@ export class ServicesComponent {
             serviceId: serviceId,
             planId: planId,
             date: '2023-08-08',
-            tripAmount: montoViaje,
+            tripAmount: 1,
             time: '8pm',
             foodAmount: this.comidaCantidad,
             roomAmount: this.roomAmount,
