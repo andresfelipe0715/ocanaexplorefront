@@ -14,6 +14,7 @@ import { ServicesComponent } from './pages/services-on/services.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { MiPlanComponent } from './pages/mi-plan/mi-plan.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { AdminProfileComponent } from './pages/admin-profile/admin-profile.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     ServicesComponent,
     UserProfileComponent,
     MiPlanComponent,
-    FooterComponent
+    FooterComponent,
+    AdminProfileComponent
   ],
   imports: [
     BrowserModule,

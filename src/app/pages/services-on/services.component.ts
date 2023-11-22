@@ -13,6 +13,8 @@ export class ServicesComponent {
   datosServicios: any;
   userId: string | null = ''; // Declara userId
   comidaCantidad: any;
+  roomAmount: any;
+  nightAmount:any;
 
   constructor(
     private route: ActivatedRoute,
@@ -49,6 +51,13 @@ export class ServicesComponent {
         }else{
           this.comidaCantidad = 0;
         }
+        if (tiposervicio === "Hoteleria") {
+          this.roomAmount = 1;
+          this.nightAmount = 1;
+        }else{
+          this.roomAmount = 0;
+          this.nightAmount = 0;
+        }
         // const horaServicio = data.serviceHour; //time
         console.log(" servicio ", montoViaje);
 
@@ -62,7 +71,10 @@ export class ServicesComponent {
             date: '2023-08-08',
             tripAmount: montoViaje,
             time: '8pm',
-            foodAmount: this.comidaCantidad
+            foodAmount: this.comidaCantidad,
+            roomAmount: this.roomAmount,
+            nightAmount:this.nightAmount,
+            doubleRoomAmount:0
           };
 
           this.planService.savePlanDetail(planDetail).subscribe(

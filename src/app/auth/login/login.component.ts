@@ -60,7 +60,7 @@ export class LoginComponent {
                 sessionStorage.setItem('userId', userData.userId);// Almacena el ID del usuario en sessionStorage
                 sessionStorage.setItem('personId', userData.personId);
                 sessionStorage.setItem('userRole', userData.profileName);
-                this.router.navigate(['/admin']);
+                this.router.navigate(['/profileadmin']);
               }
             });
 

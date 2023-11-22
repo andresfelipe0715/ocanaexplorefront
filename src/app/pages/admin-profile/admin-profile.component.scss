@@ -1,0 +1,119 @@
+.fullscreen-container {
+    width: 100%;
+    height: calc(100vh - 52px);
+    // background-image: url('../../../../assets/img/edit.jpg');
+    background-size: cover; //Ajustar la imagen al tamaño del contenedor
+    background-position: center; // Centrar la imagen
+    padding-top: 3%;
+    padding-bottom: 2%;
+    overflow-y: auto;
+  }
+  
+  .container {
+    max-width: 1100px;
+    height: 560px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #dbe9e9c0;   //dbe9e9
+    border-radius: 5px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .button-cont {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    width: 20rem ;
+    padding: 10px 20px;
+    background-color: #0077777a;
+    color: #000000d0;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+    align-items: center;
+    margin: 2%;
+  }
+  button:hover {
+    background-color: #0077773a;
+  }
+  
+  // Estilos adicionales para el diseño de dos campos por fila
+  .form-group {
+    display: inline-block;
+    width: 48%; // Ancho del 48% para que haya dos campos por fila
+    margin-right: 1%; // Margen derecho para separar los campos
+    margin-left: 1%;
+    position: relative;
+  }
+  
+  // Estilo de mostrar contraseña
+  .container-eye {
+    --color: #797979;
+    --size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    font-size: var(--size);
+    user-select: none;
+    fill: var(--color);
+    right: 25px;
+    top: 40px;
+  }
+  .container-eye .eye {
+    position: absolute;
+    animation: keyframes-fill .5s;
+  }
+  .container-eye .eye-slash {
+    position: absolute;
+    animation: keyframes-fill .5s;
+    display: none;
+  }
+  .container-eye input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .container-eye input:checked ~ .eye {
+    display: none;
+  }
+  .container-eye input:checked ~ .eye-slash {
+    display: block;
+  }
+  
